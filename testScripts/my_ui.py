@@ -10,7 +10,7 @@ def control(key)
     msg.angle = 0.0
 
     if key == "w":
-        msg.forward_speed = 1
+        msg.linear_speed = 1
     if key == "d":
         msg.angular_speed = 1
     if key == "a":

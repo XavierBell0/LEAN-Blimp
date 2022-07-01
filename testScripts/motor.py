@@ -32,15 +32,18 @@ for pin in range(1, len(motors), 2): #Sets default direction of motors
 def my_handler(channel, data):
     msg = motion_data.decode(data)
     throttle = 50 #Duty cycle!!
-    if msg.forward_speed > 0.5:
+    if msg.linear_speed > 0.5:
         pwm1.start(throttle)
         pwm2.start(throttle)
     else:
         pwm1.stop()
         pwm2.stop()
     if msg.angular_speed > 0.5:
-        pwm3.start(throttle)
-        pwm4.start(throttle)
+        pwm1.start(throttle)
+        pwm2.start(-throttle)
+    elif msg.angular_speed < -.5:
+        pwm1.start(-throttle)
+        pwm2.start(throttle)
 
 lc = lcm.LCM()
 subscription = lc.subscribe("MOTION", my_handler)
