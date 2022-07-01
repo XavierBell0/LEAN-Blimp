@@ -1,22 +1,20 @@
-from sshkeyboard import listen_keyboard
-#import keyboard
+from sshkeybaord import listen_keyboard
 import lcm
-
 from modata import motion_data
 
 lc = lcm.LCM()
 
-def press(key):
+def control(key)
     msg = motion_data()
     msg.linear_speed = 0.0
     msg.angle = 0.0
 
-        msg.linear_speed = 1
     if key == "w":
+        msg.forward_speed = 1
+    if key == "d":
+        msg.angular_speed = 1
     if key == "a":
-        msg.angle = -1
-    elif key == "d":
-        msg.angle = 1
+        msg.angular_speed = -1
 
     lc.publish("MOTION", msg.encode())
 
