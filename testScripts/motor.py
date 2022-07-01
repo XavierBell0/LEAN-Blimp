@@ -10,8 +10,8 @@ Motor1Dir = 5
 Motor2PWM = 13
 Motor2Dir = 6
 Motor3PWM = 24
-Motor3Dir = 23
-Motor4PWM = 27
+Motor3Dir = 27
+Motor4PWM = 23
 Motor4Dir = 22
 
 motors = [Motor1PWM, Motor1Dir, Motor2PWM, Motor2Dir, Motor3PWM, Motor3Dir, Motor4PWM, Motor4Dir]
