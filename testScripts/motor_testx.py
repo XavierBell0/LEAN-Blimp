@@ -19,25 +19,25 @@ GPIO.setmode(GPIO.BCM)
 
 for motor in range(len(motors)):
     GPIO.setup(motors[motor], GPIO.OUT) #Initializes all pins as output
-    print(f'set {motors[motor]} as output'
+    print(f'set {motors[motor]} as output')
     if motor%2 == 1:
         GPIO.output(motors[motor], GPIO.LOW) #Sets default direction of motors
-        print(f'Set {motors[motor]} to low'
+        print(f'Set {motors[motor]} to low')
 
 
-pwm1 = GPIO.PWM(motors[0], 100) #HARDWARE
-pwm2 = GPIO.PWM(motors[2], 100) #HARDWARE
-pwm3 = GPIO.PWM(motors[4], 100) #SOFTWARE
-pwm4 = GPIO.PWM(motors[6], 100) #SOFTWARE
+pwm1 = GPIO.PWM(motors[0], 100)
+pwm2 = GPIO.PWM(motors[2], 100)
+pwm3 = GPIO.PWM(motors[4], 100)
+pwm4 = GPIO.PWM(motors[6], 100)
 print('set pwms')
 
-print("Turning motor on")
+print("Turning motor 1 on")
 pwm1.start(20)
 sleep(3)
 print("Changing Direction")
 GPIO.output(Motor1Dir, GPIO.HIGH)
 sleep(3)
-pwm1.ChangeDutyCycle(0)
+pwm1.ChangeDutyCycle(100)
 
 print("Turning motor 2 on")
 pwm2.start(20)
@@ -45,7 +45,7 @@ sleep(3)
 print("Changing Direction")
 GPIO.output(Motor2Dir, GPIO.HIGH)
 sleep(3)
-pwm2.ChangeDutyCycle(0)
+pwm2.ChangeDutyCycle(100)
 
 print("Turning motor 3 on")
 pwm3.start(20)
@@ -53,7 +53,7 @@ sleep(3)
 print("Changing Direction")
 GPIO.output(Motor3Dir, GPIO.HIGH)
 sleep(3)
-pwm3.ChangeDutyCycle(0)
+pwm3.ChangeDutyCycle(100)
 
 print("Turning motor 4 on")
 pwm4.start(20)
@@ -61,6 +61,6 @@ sleep(3)
 print("Changing Direction")
 GPIO.output(Motor4Dir, GPIO.HIGH)
 sleep(3)
-pwm4.ChangeDutyCycle(0)
+pwm4.ChangeDutyCycle(100)
 
 GPIO.cleanup()

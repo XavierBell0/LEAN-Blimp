@@ -20,10 +20,10 @@ GPIO.setmode(GPIO.BCM)
 
 for motor in range(len(motors)):
     GPIO.setup(motors[motor], GPIO.OUT) #Initializes all pins as output
-    print(f'set {motors[motor]} as output'
+    print(f'set {motors[motor]} as output')
     if motor%2 == 1:
         GPIO.output(motors[motor], GPIO.LOW) #Sets default direction of motors
-        print(f'Set {motors[motor]} to low'
+        print(f'Set {motors[motor]} to low')
 
 
 pwm1 = GPIO.PWM(motors[0], 100) #HARDWARE
