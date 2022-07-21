@@ -29,7 +29,7 @@ pwm1 = GPIO.PWM(motors[0], 100) #HARDWARE
 pwm2 = GPIO.PWM(motors[2], 100) #HARDWARE
 pwm3 = GPIO.PWM(motors[4], 100) #SOFTWARE
 pwm4 = GPIO.PWM(motors[6], 100) #SOFTWARE
-print('set pwms)
+print('set pwms')
 
 print("Turning motor on")
 pwm1.start(20)
