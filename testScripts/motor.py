@@ -18,16 +18,17 @@ motors = [Motor1PWM, Motor1Dir, Motor2PWM, Motor2Dir, Motor3PWM, Motor3Dir, Moto
 
 GPIO.setmode(GPIO.BCM)
 
-for motor in motors: #Initializes all pins as output
-    GPIO.setup(motor, GPIO.OUT)
+for motor in range(len(motors)):
+    if motor%2 == 1:
+        GPIO.output(motors[motor], GPIO.LOW) #Sets default direction of motors
+    else:
+        GPIO.setup(motors[motor], GPIO.OUT) #Initializes all pins as output
+
 
 pwm1 = GPIO.PWM(motors[0], 100) #HARDWARE
 pwm2 = GPIO.PWM(motors[2], 100) #HARDWARE
 pwm3 = GPIO.PWM(motors[4], 100) #SOFTWARE
 pwm4 = GPIO.PWM(motors[6], 100) #SOFTWARE
-
-for pin in range(1, len(motors), 2): #Sets default direction of motors
-    GPIO.output(motors[pin], GPIO.LOW)
 
 def my_handler(channel, data):
     msg = motion_data.decode(data)

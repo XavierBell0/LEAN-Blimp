@@ -6,8 +6,8 @@ GPIO.setmode(GPIO.BCM)
 
 Motor1PWM = 12
 Motor1Dir = 5
-Motor2PWM = 13
-Motor2Dir = 16
+Motor2PWM = 20
+Motor2Dir = 21
 Motor3PWM = 22
 Motor3Dir = 27
 Motor4PWM = 23
@@ -17,13 +17,19 @@ motors = [Motor1PWM, Motor1Dir, Motor2PWM, Motor2Dir, Motor3PWM, Motor3Dir, Moto
 
 GPIO.setmode(GPIO.BCM)
 
-for motor in motors: #Initializes all pins as output
-    GPIO.setup(motor, GPIO.OUT)
+for motor in range(len(motors)):
+    GPIO.setup(motors[motor], GPIO.OUT) #Initializes all pins as output
+    print(f'set {motors[motor]} as output'
+    if motor%2 == 1:
+        GPIO.output(motors[motor], GPIO.LOW) #Sets default direction of motors
+        print(f'Set {motors[motor]} to low'
+
 
 pwm1 = GPIO.PWM(motors[0], 100) #HARDWARE
 pwm2 = GPIO.PWM(motors[2], 100) #HARDWARE
 pwm3 = GPIO.PWM(motors[4], 100) #SOFTWARE
 pwm4 = GPIO.PWM(motors[6], 100) #SOFTWARE
+print('set pwms)
 
 print("Turning motor on")
 pwm1.start(20)
