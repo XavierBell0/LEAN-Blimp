@@ -2,6 +2,7 @@ package modata;
 
 struct motion_data
 {
-	double linear_speed;
-	double angle;
+    double linear_speed;
+    double angular_speed;
+    double vertical_speed;
 }
