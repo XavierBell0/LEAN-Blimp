@@ -3,10 +3,10 @@ import board
 from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219
 
 
-i2c_pi = board.I2C()
+i2c_bus = board.I2C()
 print(i2c_bus)
-pi_ina219 = INA219(i2c_bus)
-motor_ina219 = INA219(i2c, 0x41)
+pi_ina219 = INA219(i2c_bus, 0x40)
+motor_ina219 = INA219(i2c_bus, 0x41)
 
 print("ina219 test")
 
