@@ -7,14 +7,21 @@ lc = lcm.LCM()
 def control(key)
     msg = motion_data()
     msg.linear_speed = 0.0
-    msg.angle = 0.0
+    msg.angular_speed = 0.0
+    msg.vertical_speed = 0.0
 
     if key == "w":
         msg.linear_speed = 1
+    if key == "s":
+        msg.linear_speed = -1
     if key == "d":
         msg.angular_speed = 1
     if key == "a":
         msg.angular_speed = -1
+    if key == "+":
+        msg.vertical_speed = 1
+    if key == "-":
+        msg.vertical_speed = -1
 
     lc.publish("MOTION", msg.encode())
 
