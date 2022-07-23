@@ -1,4 +1,4 @@
-import keyboard
+import sshkeyboard import listen_keyboard
 import RPi.GPIO as GPIO
 import time
 import lcm
@@ -76,7 +76,8 @@ def my_handler(channel, data):
 lc = lcm.LCM()
 subscription = lc.subscribe("MOTION", my_handler)
 
-lc.handle()
+while True:
+    lc.handle()
 
 pwm1.stop(0)
 pwm2.stop(0)
