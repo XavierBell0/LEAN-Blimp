@@ -24,8 +24,8 @@ for motor in motors:
     GPIO.output(motor, GPIO.LOW) #Sets default direction of motors
     print(f'Set {motor} to low')
 
-pwm1 = GPIO.PWM(motors[0], 100) #HARDWARE
-pwm2 = GPIO.PWM(motors[2], 100) #HARDWARE
+pwm1 = GPIO.PWM(motors[0], 100) #SOFTWARE
+pwm2 = GPIO.PWM(motors[2], 100) #SOFTWARE
 pwm3 = GPIO.PWM(motors[4], 100) #SOFTWARE
 pwm4 = GPIO.PWM(motors[6], 100) #SOFTWARE
 
@@ -39,15 +39,15 @@ def my_handler(channel, data):
     throttle = 50 #Duty cycle!!
     if msg.linear_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
-        GPIO.output(Motor2Dir, GPIO.LOW)
+        #GPIO.output(Motor2Dir, GPIO.LOW)
         pwm1.ChangeDutyCycle(throttle)
-        pwm2.ChangeDutyCycle(throttle)
+        #pwm2.ChangeDutyCycle(throttle)
         print('forward')
     if msg.linear_speed < -0.5:
         GPIO.output(Motor1Dir, GPIO.HIGH)
-        GPIO.output(Motor2Dir, GPIO.HIGH)
+        #GPIO.output(Motor2Dir, GPIO.HIGH)
         pwm1.ChangeDutyCycle(100-throttle)
-        pwm2.ChangeDutyCycle(100-throttle)
+        #pwm2.ChangeDutyCycle(100-throttle)
         print('back')
     if msg.angular_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
@@ -73,15 +73,15 @@ def my_handler(channel, data):
         pwm3.ChangeDutyCycle(100-throttle)
         pwm4.ChangeDutyCycle(100-throttle)
         print('down')
-    else:
-        GPIO.output(Motor1Dir, GPIO.LOW)
-        GPIO.output(Motor2Dir, GPIO.LOW)
-        GPIO.output(Motor3Dir, GPIO.LOW)
-        GPIO.output(Motor4Dir, GPIO.LOW)
-        pwm1.ChangeDutyCycle(0)
-        pwm2.ChangeDutyCycle(0)
-        pwm3.ChangeDutyCycle(0)
-        pwm4.ChangeDutyCycle(0)
+    #else:
+        #GPIO.output(Motor1Dir, GPIO.LOW)
+        #GPIO.output(Motor2Dir, GPIO.LOW)
+        #GPIO.output(Motor3Dir, GPIO.LOW)
+        #GPIO.output(Motor4Dir, GPIO.LOW)
+        #pwm1.ChangeDutyCycle(0)
+        #pwm2.ChangeDutyCycle(0)
+        #pwm3.ChangeDutyCycle(0)
+        #pwm4.ChangeDutyCycle(0)
 
 lc = lcm.LCM()
 subscription = lc.subscribe("MOTION", my_handler)
