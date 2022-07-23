@@ -36,7 +36,7 @@ pwm4.start(0)
 
 def my_handler(channel, data):
     msg = motion_data.decode(data)
-    print(f'{msg.linear_speed=}, {msg.angular_speed=}, {msg.vertical_speed=}
+    print(f'{msg.linear_speed=}, {msg.angular_speed=}, {msg.vertical_speed=}')
     throttle = 50 #Duty cycle!!
     if msg.linear_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
