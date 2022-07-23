@@ -4,7 +4,7 @@ from modata import motion_data
 
 lc = lcm.LCM()
 
-def control(key)
+def press(key):
     msg = motion_data()
     msg.linear_speed = 0.0
     msg.angular_speed = 0.0
