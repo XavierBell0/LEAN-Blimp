@@ -13,7 +13,7 @@ def press(key):
 
     if key == "w":
         msg.linear_speed = 1
-        print('haahahahhahahaha')
+        print('hahaaa')
     if key == "s":
         msg.linear_speed = -1
     if key == "d":
