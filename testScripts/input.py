@@ -1,4 +1,4 @@
-from sshkeybaord import listen_keyboard
+from sshkeyboard import listen_keyboard
 import lcm
 from modata import motion_data
 
