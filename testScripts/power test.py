@@ -19,7 +19,7 @@ print("  shunt_adc_resolution: 0x%1X" % pi_ina219.shunt_adc_resolution)
 print("  mode:                 0x%1X" % pi_ina219.mode)
 print("")
 
-sleep(5)
+time.sleep(5)
 
 # optional : change configuration to use 32 samples averaging for both bus voltage and shunt voltage
 pi_ina219.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S
@@ -31,10 +31,12 @@ motor_ina219.bus_voltage_range = BusVoltageRange.RANGE_16V
 # measure and display loop
 while True:
     pi_bus_voltage = pi_ina219.bus_voltage  # voltage on V- (load side)
+    pi_shunt_voltage = pi_ina219.shunt_voltage
     pi_current = pi_ina219.current  # current in mA
     pi_power = pi_ina219.power  # power in watts
 
     motor_bus_voltage = motor_ina219.bus_voltage  # voltage on V- (load side)
+    motor_shunt_voltage = motor_ina219.shunt_voltage
     motor_current = motor_ina219.current  # current in mA
     motor_power = motor_ina219.power # power in watts
 

@@ -1,0 +1,11 @@
+package podata;
+
+struct power_data
+{
+    double pi_voltage;
+    double pi_current;
+    double pi_power;
+    double motor_voltage;
+    double motor_current;
+    double motor_power;
+}
