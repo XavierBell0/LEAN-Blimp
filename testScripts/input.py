@@ -1,5 +1,6 @@
 from sshkeyboard import listen_keyboard
 import lcm
+
 from modata import motion_data
 
 lc = lcm.LCM()
@@ -12,13 +13,14 @@ def press(key):
 
     if key == "w":
         msg.linear_speed = 1
+        print('haahahahhahahaha')
     if key == "s":
         msg.linear_speed = -1
     if key == "d":
         msg.angular_speed = 1
     if key == "a":
         msg.angular_speed = -1
-    if key == "+":
+    if key == "=":
         msg.vertical_speed = 1
     if key == "-":
         msg.vertical_speed = -1
