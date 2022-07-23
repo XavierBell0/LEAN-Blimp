@@ -20,3 +20,7 @@ print("Changing Direction")
 GPIO.output(Motor1Dir, GPIO.HIGH)
 sleep(3)
 pwm1.ChangeDutyCycle(100)
+
+pwm1.stop()
+
+GPIO.cleanup()
