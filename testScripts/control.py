@@ -1,4 +1,4 @@
-import sshkeyboard import listen_keyboard
+from sshkeyboard import listen_keyboard
 import RPi.GPIO as GPIO
 import time
 import lcm
