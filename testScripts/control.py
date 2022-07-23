@@ -36,37 +36,43 @@ pwm4.start(0)
 
 def my_handler(channel, data):
     msg = motion_data.decode(data)
-    throttle = 50 #Duty cycle!!
+    throttle = 30 #Duty cycle!!
     if msg.linear_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
         GPIO.output(Motor1Dir, GPIO.LOW)
         pwm1.start(throttle)
         pwm2.start(throttle)
+        print('forward')
     if msg.linear_speed < -0.5:
         GPIO.output(Motor1Dir, GPIO.HIGH)
         GPIO.output(Motor2Dir, GPIO.HIGH)
         pwm1.start(100-throttle)
         pwm2.start(100-throttle)
+        print('back')
     if msg.angular_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
         GPIO.output(Motor2Dir, GPIO.HIGH)
         pwm1.start(throttle)
         pwm2.start(100-throttle)
+        print('right')
     if msg.angular_speed < -.5:
         GPIO.output(Motor1Dir, GPIO.HIGH)
         GPIO.output(Motor2Dir, GPIO.LOW)
         pwm1.start(100-throttle)
         pwm2.start(throttle)
+        print('left')
     if msg.vertical_speed > 0.5:
-        GPIO.output(Motor1Dir, GPIO.LOW)
-        GPIO.output(Motor1Dir, GPIO.LOW)
+        GPIO.output(Motor3Dir, GPIO.LOW)
+        GPIO.output(Motor4Dir, GPIO.LOW)
         pwm3.start(throttle)
         pwm4.start(throttle)
+        print('up')
     if msg.vertical_speed < -0.5:
-        GPIO.output(Motor1Dir, GPIO.HIGH)
-        GPIO.output(Motor2Dir, GPIO.HIGH)
+        GPIO.output(Motor3Dir, GPIO.HIGH)
+        GPIO.output(Motor4Dir, GPIO.HIGH)
         pwm3.start(100-throttle)
         pwm4.start(100-throttle)
+        print('down')
     else:
         pwm1.ChangeDutyCycle(0)
         pwm2.ChangeDutyCycle(0)
