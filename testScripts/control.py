@@ -36,7 +36,7 @@ pwm4.start(0)
 
 def my_handler(channel, data):
     msg = motion_data.decode(data)
-    throttle = 50 #Duty cycle!!
+    throttle = 20 #Duty cycle!!
     if msg.linear_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
         GPIO.output(Motor2Dir, GPIO.LOW)

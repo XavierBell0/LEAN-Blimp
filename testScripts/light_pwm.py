@@ -12,14 +12,16 @@ GPIO.output(Motor1PWM, GPIO.LOW)
 GPIO.output(Motor1Dir, GPIO.LOW)
 
 pwm1 = GPIO.PWM(Motor1PWM, 100)
+pwm1.start(0)
+sleep(.1)
 
 print("Turning motor 1 on")
-pwm1.start(20)
+pwm1.ChangeDutyCycle(20)
 sleep(3)
 print("Changing Direction")
 GPIO.output(Motor1Dir, GPIO.HIGH)
-sleep(3)
 pwm1.ChangeDutyCycle(100)
+sleep(3)
 
 pwm1.stop()
 
