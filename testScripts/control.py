@@ -39,15 +39,15 @@ def my_handler(channel, data):
     throttle = 50 #Duty cycle!!
     if msg.linear_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
-        #GPIO.output(Motor2Dir, GPIO.LOW)
+        GPIO.output(Motor2Dir, GPIO.LOW)
         pwm1.ChangeDutyCycle(throttle)
-        #pwm2.ChangeDutyCycle(throttle)
+        pwm2.ChangeDutyCycle(throttle)
         print('forward')
     if msg.linear_speed < -0.5:
         GPIO.output(Motor1Dir, GPIO.HIGH)
-        #GPIO.output(Motor2Dir, GPIO.HIGH)
+        GPIO.output(Motor2Dir, GPIO.HIGH)
         pwm1.ChangeDutyCycle(100-throttle)
-        #pwm2.ChangeDutyCycle(100-throttle)
+        pwm2.ChangeDutyCycle(100-throttle)
         print('back')
     if msg.angular_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
