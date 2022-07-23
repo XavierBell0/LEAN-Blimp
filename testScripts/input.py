@@ -23,7 +23,7 @@ def press(key):
         msg.vertical_speed = 1
     if key == "-":
         msg.vertical_speed = -1
-    if key = " ":
+    if key == " ":
         msg.linear_speed = 0.0
         msg.angular_speed = 0.0
         msg.vertical_speed = 0.0
