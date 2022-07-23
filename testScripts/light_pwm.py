@@ -11,7 +11,7 @@ GPIO.setup(Motor1Dir, GPIO.OUT)
 GPIO.output(Motor1PWM, GPIO.LOW)
 GPIO.output(Motor1Dir, GPIO.LOW)
 
-pwm = GPIO.PWM(Motor1PWM, 100)
+pwm1 = GPIO.PWM(Motor1PWM, 100)
 
 print("Turning motor 1 on")
 pwm1.start(20)
