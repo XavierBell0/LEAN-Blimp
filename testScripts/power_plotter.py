@@ -53,6 +53,7 @@ with sqlite3.connect(power_db) as c:
         counter = 0
         while os.path.isfile("/home/pi/LEAN-Blimp/testScripts/graphs/"+ title + str(counter) + ".png"):
             counter += 1
+        fig.suptitle(title + str(counter))
         plt.savefig("/home/pi/LEAN-Blimp/testScripts/graphs/"+ title + str(counter) + ".png")
 
 
