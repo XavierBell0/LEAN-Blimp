@@ -23,7 +23,7 @@ with sqlite3.connect(power_db) as c:
             current_y.append(entry[2])
             power_y.append(entry[3])
             time_x.append(entry[4])
-        samples = 10 #amount of entries on BOTH sides of data point to average from. EVEN NUMBER
+        samples = 5 #amount of entries on BOTH sides of data point to average from.
         avg_power_y = []
         for entry in range(samples, len(power_y)-samples):
             sample = power_y[entry-samples:entry + samples]
