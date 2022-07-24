@@ -25,12 +25,12 @@ with sqlite3.connect(power_db) as c:
             time_x.append(entry[4])
         samples = 10
         avg_power_y = []
-        for entry in range(len(power_y)-samples):
-            sample = power_y[entry:entry + samples]
+        for entry in range(samples/2, len(power_y)-samples/2):
+            sample = power_y[entry-samples/2:entry + samples/2]
             avg_power_y.append(sum(sample)/len(sample))
         avg_current_y = []
-        for entry in range(len(current_y)-samples):
-            sample = current_y[entry:entry + samples]
+        for entry in range(samples/2, len(current_y)-samples/2):
+            sample = current_y[entry-samples/2:entry + samples/2]
             avg_current_y.append(sum(sample)/len(sample))
 
         fig, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
@@ -38,11 +38,11 @@ with sqlite3.connect(power_db) as c:
         ax1.set_ylim([2, 5.25])
         ax1.set(xlabel = 'Time (s)', ylabel = "Voltage (V)")
         ax2.plot(np.array(time_x), np.array(current_y))
-        ax2.plot(np.array(time_x[:-samples]), np.array(avg_current_y))
+        ax2.plot(np.array(time_x[samples/2:-samples/2]), np.array(avg_current_y))
         ax2.set_ylim([0, 1500])
         ax2.set(xlabel = 'Time (s)', ylabel = "Current (mA)")
         ax3.plot(np.array(time_x), np.array(power_y))
-        ax3.plot(np.array(time_x[:-samples]), np.array(avg_power_y))
+        ax3.plot(np.array(time_x[samples/2:-samples/2]), np.array(avg_power_y))
         ax3.set_ylim([0, 5])
         ax3.set(xlabel = 'Time (s)', ylabel = "Power (W)")
         #running_power = []
