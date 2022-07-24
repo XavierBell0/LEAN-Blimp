@@ -25,7 +25,7 @@ with sqlite3.connect(power_db) as c:
             time_x.append(entry[4])
         fig, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
         ax1.plot(np.array(time_x), np.array(voltage_y))
-        ax1.set_ylim([0, 5])
+        ax1.set_ylim([2, 5.25])
         ax1.set(xlabel = 'Time (s)', ylabel = "Voltage (V)")
         ax2.plot(np.array(time_x), np.array(current_y))
         ax2.set_ylim([0, 1500])

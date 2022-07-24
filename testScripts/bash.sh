@@ -1,4 +1,4 @@
-#! /bin/bash
+#!=/bin/bash
 set -m
 
 sudo python3 input.py &

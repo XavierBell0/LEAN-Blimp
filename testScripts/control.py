@@ -39,7 +39,7 @@ def my_handler(channel, data):
     print(f'msg.linear_speed = {msg.linear_speed}')
     print(f'msg.angular_speed = {msg.angular_speed}')
     print(f'msg.vertical_speed = {msg.vertical_speed}')
-    throttle = 50 #Duty cycle!!
+    throttle = 15 #Duty cycle!!
     GPIO.output(Motor1Dir, GPIO.LOW)
     GPIO.output(Motor2Dir, GPIO.LOW)
     GPIO.output(Motor3Dir, GPIO.LOW)
