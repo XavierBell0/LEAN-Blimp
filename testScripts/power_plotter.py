@@ -23,25 +23,21 @@ with sqlite3.connect(power_db) as c:
             current_y.append(entry[2])
             power_y.append(entry[3])
             time_x.append(entry[4])
-        fig, axs = plt.subplots(3)
-        #plt.subplot(3,1,1)
-        #plt.plot(np.array(time_x), np.array(voltage_y))
-        axs[0].plot(np.array(time_x), np.array(voltage_y))
-        plt.ylabel("Voltage (V)")
-        #plt.subplot(3,1,2)
-        #plt.plot(np.array(time_x), np.array(current_y))
-        axs[1].plot(np.array(time_x), np.array(current_y))
-        plt.ylabel("Current (mA)")
-        #plt.subplot(3,1,3)
-        #plt.plot(np.array(time_x), np.array(power_y))
-        axs[2].plot(np.array(time_x), np.array(power_y))
-        plt.ylabel("Power (W)")
+        fig, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
+        ax1.plot(np.array(time_x), np.array(voltage_y))
+        ax1.set_ylim([0, 5])
+        ax1.set(xlabel = 'Time', ylabel = "Voltage (V)")
+        ax2.plot(np.array(time_x), np.array(current_y))
+        ax2.set_ylim([0, 1500])
+        ax2.set(xlabel = 'Time', ylabel = "Current (mA)")
+        ax3.plot(np.array(time_x), np.array(power_y))
+        ax3.set_ylim([0, 5])
+        ax3.set(xlabel = 'Time', ylabel = "Power (W)")
         #running_power = []
         #for p in power_y:
             #if p > 0.2:
                 #running_power.append(p)
         #print(sum(running_power)/len(running_power))
-        plt.xlabel("Time (s)")
         counter = 0
         while os.path.isfile("/home/pi/LEAN-Blimp/testScripts/graphs/"+ title + str(counter) + ".png"):
             counter += 1
