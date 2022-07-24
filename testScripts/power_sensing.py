@@ -1,5 +1,6 @@
 import time
 import board
+import lcm
 from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219
 from podata import power_data
 
