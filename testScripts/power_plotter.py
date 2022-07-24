@@ -26,13 +26,13 @@ with sqlite3.connect(power_db) as c:
         fig, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
         ax1.plot(np.array(time_x), np.array(voltage_y))
         ax1.set_ylim([0, 5])
-        ax1.set(xlabel = 'Time', ylabel = "Voltage (V)")
+        ax1.set(xlabel = 'Time (s)', ylabel = "Voltage (V)")
         ax2.plot(np.array(time_x), np.array(current_y))
         ax2.set_ylim([0, 1500])
-        ax2.set(xlabel = 'Time', ylabel = "Current (mA)")
+        ax2.set(xlabel = 'Time (s)', ylabel = "Current (mA)")
         ax3.plot(np.array(time_x), np.array(power_y))
         ax3.set_ylim([0, 5])
-        ax3.set(xlabel = 'Time', ylabel = "Power (W)")
+        ax3.set(xlabel = 'Time (s)', ylabel = "Power (W)")
         #running_power = []
         #for p in power_y:
             #if p > 0.2:
