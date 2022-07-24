@@ -39,9 +39,9 @@ with sqlite3.connect(power_db) as c:
         plt.title("Power (W)")
         plt.xlabel("Time (s)")
         counter = 0
-        while os.path.isfile("/home/pi/LEAN-Blimp/testScripts/graphs"+ title + str(counter) + ".png"):
+        while os.path.isfile("/home/pi/LEAN-Blimp/testScripts/graphs/"+ title + str(counter) + ".png"):
             counter += 1
-        plt.savefig("/home/pi/LEAN-Blimp/testScripts/graphs"+ title + str(counter) + ".png")
+        plt.savefig("/home/pi/LEAN-Blimp/testScripts/graphs/"+ title + str(counter) + ".png")
 
-    plotter(motor_data, 'Actuation Power')
-    plotter(pi_data, 'Computation Power')
+    plotter(motor_data, 'ActuationPower')
+    plotter(pi_data, 'ComputationPower')
