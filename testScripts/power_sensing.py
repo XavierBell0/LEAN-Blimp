@@ -10,9 +10,9 @@ i2c_bus = board.I2C()
 pi = INA219(i2c_bus, 0x40)
 motor = INA219(i2c_bus, 0x41)
 
-#change configuration to use 16 samples averaging for both bus voltage and shunt voltage
-pi.bus_adc_resolution = ADCResolution.ADCRES_12BIT_16S
-motor.bus_adc_resolution = ADCResolution.ADCRES_12BIT_16S
+#change configuration to use 32 samples averaging for both bus voltage and shunt voltage
+pi.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S
+motor.bus_adc_resolution = ADCResolution.ADCRES_12BIT_32S
 #hange voltage range to 16V
 pi.bus_voltage_range = BusVoltageRange.RANGE_16V
 motor.bus_voltage_range = BusVoltageRange.RANGE_16V
