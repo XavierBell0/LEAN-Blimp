@@ -6,8 +6,8 @@ from podata import power_data
 
 power_db = "/home/pi/LEAN-Blimp/testScripts/power.db"
 with sqlite3.connect(power_db) as c:
-    c.execute("""DROP TABLE actuation_power_data;""")
-    c.execute("""DROP TABLE computation_power_data;""")
+    c.execute("""DROP TABLE IF EXISTS actuation_power_data;""")
+    c.execute("""DROP TABLE IF EXISTS computation_power_data;""")
     c.execute("""CREATE TABLE IF NOT EXISTS actuation_power_data (source text, voltage decimal, current decimal, power decimal, time int);""")
     c.execute("""CREATE TABLE IF NOT EXISTS computation_power_data (source text, voltage decimal, current decimal, power decimal, time int);""")
 
