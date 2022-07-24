@@ -23,7 +23,7 @@ with sqlite3.connect(power_db) as c:
             current_y.append(entry[2])
             power_y.append(entry[3])
             time_x.append(entry[4])
-        fig, axs = plt.subplots[3]
+        fig, axs = plt.subplots(3)
         #plt.subplot(3,1,1)
         #plt.plot(np.array(time_x), np.array(voltage_y))
         axs[0].plot(np.array(time_x), np.array(voltage_y))
