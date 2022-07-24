@@ -1,5 +1,4 @@
 #! /bin/bash
-set -m
+#set -m
 
 sudo python3 'input.py' & sudo python3 'control.py' &
-fg % 2
