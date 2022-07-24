@@ -3,7 +3,7 @@ import board
 from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219
 from podata import power_data
 
-lc = lcm.LCM
+lc = lcm.LCM()
 
 i2c_bus = board.I2C()
 pi = INA219(i2c_bus, 0x40)
