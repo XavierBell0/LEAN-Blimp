@@ -34,8 +34,8 @@ pwm2.start(15)
 pwm3.start(15)
 pwm4.start(15)
 
-sleep(15)
 
+sleep(15)
 pwm1.stop(0)
 pwm2.stop(0)
 pwm3.stop(0)

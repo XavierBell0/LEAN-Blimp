@@ -24,10 +24,10 @@ for motor in motors:
     GPIO.output(motor, GPIO.LOW) #Sets default direction of motors
     print(f'Set {motor} to low')
 
-pwm1 = GPIO.PWM(motors[0], 100) #SOFTWARE
-pwm2 = GPIO.PWM(motors[2], 100) #SOFTWARE
-pwm3 = GPIO.PWM(motors[4], 100) #SOFTWARE
-pwm4 = GPIO.PWM(motors[6], 100) #SOFTWARE
+pwm1 = GPIO.PWM(motors[0], 500) #SOFTWARE
+pwm2 = GPIO.PWM(motors[2], 500) #SOFTWARE
+pwm3 = GPIO.PWM(motors[4], 500) #SOFTWARE
+pwm4 = GPIO.PWM(motors[6], 500) #SOFTWARE
 
 pwm1.start(0)
 pwm2.start(0)
@@ -39,7 +39,7 @@ def my_handler(channel, data):
     print(f'msg.linear_speed = {msg.linear_speed}')
     print(f'msg.angular_speed = {msg.angular_speed}')
     print(f'msg.vertical_speed = {msg.vertical_speed}')
-    throttle = 20 #Duty cycle!!
+    throttle = 15 #Duty cycle!!
     GPIO.output(Motor1Dir, GPIO.LOW)
     GPIO.output(Motor2Dir, GPIO.LOW)
     GPIO.output(Motor3Dir, GPIO.LOW)
