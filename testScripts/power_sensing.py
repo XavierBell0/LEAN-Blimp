@@ -34,4 +34,4 @@ while True:
     msg.motor_power = motor.power # power in watts
 
     lc.publish("POWER", msg.encode())
-    time.sleep(.1)
+    time.sleep(.05)

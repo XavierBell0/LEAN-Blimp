@@ -23,10 +23,10 @@ for motor in motors:
     print(f'Set {motor} to low')
 
 
-pwm1 = GPIO.PWM(motors[0], 100)
-pwm2 = GPIO.PWM(motors[2], 100)
-pwm3 = GPIO.PWM(motors[4], 100)
-pwm4 = GPIO.PWM(motors[6], 100)
+pwm1 = GPIO.PWM(motors[0], 1000)
+pwm2 = GPIO.PWM(motors[2], 1000)
+pwm3 = GPIO.PWM(motors[4], 1000)
+pwm4 = GPIO.PWM(motors[6], 1000)
 print('set pwms')
 
 pwm1.start(15)

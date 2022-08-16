@@ -24,10 +24,10 @@ for motor in motors:
     GPIO.output(motor, GPIO.LOW) #Sets default direction of motors
     print(f'Set {motor} to low')
 
-pwm1 = GPIO.PWM(motors[0], 500) #SOFTWARE
-pwm2 = GPIO.PWM(motors[2], 500) #SOFTWARE
-pwm3 = GPIO.PWM(motors[4], 500) #SOFTWARE
-pwm4 = GPIO.PWM(motors[6], 500) #SOFTWARE
+pwm1 = GPIO.PWM(motors[0], 1000) #SOFTWARE
+pwm2 = GPIO.PWM(motors[2], 1000) #SOFTWARE
+pwm3 = GPIO.PWM(motors[4], 1000) #SOFTWARE
+pwm4 = GPIO.PWM(motors[6], 1000) #SOFTWARE
 
 pwm1.start(0)
 pwm2.start(0)
