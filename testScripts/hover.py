@@ -42,26 +42,22 @@ def PID(waypoint, pos, kp = .5, ki = .5, kd = .5, bias = 0, iteration_time = 0.0
         sleep(iteration_time)
         return output
 
-def control(direction, throttle):
-    if direction == 'up':
+def control(throttle):
+    if throttle >= 0: #pos
         GPIO.output(Motor3Dir, GPIO.LOW)
         GPIO.output(Motor4Dir, GPIO.LOW)
         pwm3.ChangeDutyCycle(throttle)
         pwm4.ChangeDutyCycle(throttle)
-    if direction == 'down':
+    elif throttle < 0: #neg
         GPIO.output(Motor3Dir, GPIO.HIGH)
-        pwm3.ChangeDutyCycle(100-throttle)
+        pwm3.ChangeDutyCycle(100+throttle)
         GPIO.output(Motor4Dir, GPIO.HIGH)
-        pwm4.ChangeDutyCycle(100-throttle)
+        pwm4.ChangeDutyCycle(100+throttle)
     GPIO.output(Motor3Dir, GPIO.LOW)
     GPIO.output(Motor4Dir, GPIO.LOW)
     pwm3.ChangeDutyCycle(0)
     pwm4.ChangeDutyCycle(0)
 
 while True:
-    if PID(waypoint[2], pos[2]) > 0:
-        control('up', PID(waypoint[2], pos[2]))
-        sleep(.05)
-    else:
-        control('down', PID(waypoint[2], pos[2]))
-        sleep(.05)
+    control(PID(waypoint[2], pos[2]))
+    sleep(.05)

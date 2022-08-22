@@ -12,28 +12,21 @@ Motor2PWM = 6
 Motor2Dir = 21
 
 
-motorpwm = [Motor1PWM, Motor2PWM]
-motordir = [Motor1Dir, Motor2Dir]
+motors = [Motor1PWM, Motor1Dir, Motor2PWM, Motor2Dir]
 
 GPIO.setmode(GPIO.BCM)
 
-for motor in motorpwm + motordir:
+for motor in motors:
     GPIO.setup(motor, GPIO.OUT) #Initializes all pins as output
     #print(f'Set {motor} as output')
     GPIO.output(motor, GPIO.LOW) #Sets default direction of motors
     #(f'Set {motor} to low')
 
-pwm1 = 0
-pwm2 = 0
-pwm3 = 0
-pwm4 = 0
-pwm_names = [pwm1, pwm2, pwm3, pwm4]
-pwm = []
+pwm1 = GPIO.PWM(motors[0], 1000) #SOFTWARE
+pwm2 = GPIO.PWM(motors[2], 1000) #SOFTWARE
 
-for motor in range(len(motorpwm)):
-    pwm_names[motor] = GPIO.PWM(motorpwm[motor], 1000) #SOFTWARE
-    pwm.append(pwm_names[motor])
-    pwm_names[motor].start(0)
+pwm1.start(0)
+pwm2.start(0)
 
 
 def PID(waypoint, pos, kp = .5, ki = .5, kd = .5, bias = 0, iteration_time = 0.05):
@@ -52,16 +45,6 @@ def PID(waypoint, pos, kp = .5, ki = .5, kd = .5, bias = 0, iteration_time = 0.0
     return None
 
 def control(direction, throttle):
-    if direction == 'forward':
-        GPIO.output(Motor1Dir, GPIO.LOW)
-        GPIO.output(Motor2Dir, GPIO.LOW)
-        pwm1.ChangeDutyCycle(throttle)
-        pwm2.ChangeDutyCycle(throttle)
-    if direction == 'back':
-        GPIO.output(Motor1Dir, GPIO.HIGH)
-        GPIO.output(Motor2Dir, GPIO.HIGH)
-        pwm1.ChangeDutyCycle(100-throttle)
-        pwm2.ChangeDutyCycle(100-throttle)
     if direction == 'right':
         GPIO.output(Motor1Dir, GPIO.LOW)
         GPIO.output(Motor2Dir, GPIO.HIGH)
@@ -77,12 +60,25 @@ def control(direction, throttle):
     pwm1.ChangeDutyCycle(0)
     pwm2.ChangeDutyCycle(0)
 
+def spin(throttle, motorpwm, motordir):
+    if throttle >= 0: #pos
+        GPIO.output(motordir, GPIO.LOW)
+        motorpwm.ChangeDutyCycle(throttle)
+    elif throttle < 0: #neg - left
+        GPIO.output(motordir, GPIO.HIGH)
+        motorpwm.ChangeDutyCycle(100+throttle)
+    GPIO.output(motordir, GPIO.LOW)
+    motorpwm.ChangeDutyCycle(0)
+
 
 def navigation(pos, waypoint):
     '''Assumes pos and waypoint are both lists of [x,y,z,bearing] coords'''
     bearing = np.arctan2((waypoint[0]-pos[0]), (waypoint[1]-pos[1]))
     distance = (abs((waypoint[0]-pos[0]))^2+abs((waypoint[1]-pos[1])))^.5
     return (bearing, distance, pos)
+
+def clamp(n, smallest, largest):
+    return max(smallest, min(n, largest))
 
 def turn_to(pos, waypoint):
     nav = navigation(pos, waypoint)
@@ -98,11 +94,14 @@ def turn_to(pos, waypoint):
 
 def go_to(pos, waypoint):
     nav = navigation(pos, waypoint)
-    while nav[1] > .05:
-        if PID(0, distance) > 0:
-            control('forward', throttle)
-        else:
-            control('back', throttle)
+    while nav[1] > .05:# accepted error
+        throttle_right = PID(nav[1], 0) + PID(nav[0], pos[3])
+        throttle_left = PID(nav[1], 0) - PID(nav[0], pos[3])
+        clamp(throttle_right, -100, 100)
+        clamp(throttle_left, -100, 100)
+        spin(throttle_left, pwm1, Motor1Dir)
+        spin(throttle_right, pwm2, Motor2Dir)
+    sleep(.05)
 
 while True:
     if turn_to(pos,waypoint) is not None:
