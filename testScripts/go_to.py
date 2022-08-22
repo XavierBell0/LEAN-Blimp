@@ -12,21 +12,28 @@ Motor2PWM = 6
 Motor2Dir = 21
 
 
-motors = [Motor1PWM, Motor1Dir, Motor2PWM, Motor2Dir]
+motorpwm = [Motor1PWM, Motor2PWM]
+motordir = [Motor1Dir, Motor2Dir]
 
 GPIO.setmode(GPIO.BCM)
 
-for motor in motors:
+for motor in motorpwm + motordir:
     GPIO.setup(motor, GPIO.OUT) #Initializes all pins as output
     #print(f'Set {motor} as output')
     GPIO.output(motor, GPIO.LOW) #Sets default direction of motors
     #(f'Set {motor} to low')
 
-pwm1 = GPIO.PWM(motors[0], 1000) #SOFTWARE
-pwm2 = GPIO.PWM(motors[2], 1000) #SOFTWARE
+pwm1 = 0
+pwm2 = 0
+pwm3 = 0
+pwm4 = 0
+pwm_names = [pwm1, pwm2, pwm3, pwm4]
+pwm = []
 
-pwm1.start(0)
-pwm2.start(0)
+for motor in range(len(motorpwm)):
+    pwm_names[motor] = GPIO.PWM(motorpwm[motor], 1000) #SOFTWARE
+    pwm.append(pwm_names[motor])
+    pwm_names[motor].start(0)
 
 
 def PID(waypoint, pos, kp = .5, ki = .5, kd = .5, bias = 0, iteration_time = 0.05):

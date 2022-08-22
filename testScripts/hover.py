@@ -31,6 +31,7 @@ def PID(waypoint, pos, kp = .5, ki = .5, kd = .5, bias = 0, iteration_time = 0.0
     if time_elasped < 0.1:
         err_prior = 0
         integral_prior = 0
+        return 0
     if err > .05:
         err = waypoint - pos
         integral = integral_prior + err * iteration_time
@@ -40,7 +41,6 @@ def PID(waypoint, pos, kp = .5, ki = .5, kd = .5, bias = 0, iteration_time = 0.0
         integral_prior = integral
         sleep(iteration_time)
         return output
-    return None
 
 def control(direction, throttle):
     if direction == 'up':
