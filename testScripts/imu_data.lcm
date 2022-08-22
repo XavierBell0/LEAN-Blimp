@@ -1,0 +1,11 @@
+package acceldata;
+
+struct imu_data
+{
+    double Ax;
+    double Ay;
+    double Az;
+    double Gx;
+    double Gy;
+    double Gz;
+}
