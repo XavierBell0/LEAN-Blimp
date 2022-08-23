@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lcm-tester.dir/lcm-tester.c.o"
-  "lcm-tester"
   "lcm-tester.pdb"
+  "lcm-tester"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lcm-buftest-receiver.dir/buftest-receiver.c.o"
-  "lcm-buftest-receiver"
   "lcm-buftest-receiver.pdb"
+  "lcm-buftest-receiver"
 )
 
 # Per-language clean rules from dependency scanning.

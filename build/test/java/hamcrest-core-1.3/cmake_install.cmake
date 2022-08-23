@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/test/java/hamcrest-core-1.3
+# Install script for directory: /home/pi/LEAN-Blimp/test/java/hamcrest-core-1.3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

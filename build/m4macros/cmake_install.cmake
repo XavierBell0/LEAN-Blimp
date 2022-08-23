@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/m4macros
+# Install script for directory: /home/pi/LEAN-Blimp/m4macros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aclocal" TYPE FILE FILES "/home/pi/boat/m4macros/lcm.m4")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aclocal" TYPE FILE FILES "/home/pi/LEAN-Blimp/m4macros/lcm.m4")
 endif()
 

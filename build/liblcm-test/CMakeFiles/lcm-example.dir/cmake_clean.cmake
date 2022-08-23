@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lcm-example.dir/lcm-example.c.o"
-  "lcm-example"
   "lcm-example.pdb"
+  "lcm-example"
 )
 
 # Per-language clean rules from dependency scanning.

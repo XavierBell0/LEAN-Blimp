@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../lib/python2.7/dist-packages/lcm/__init__.py"
   "CMakeFiles/lcm-python-init"
+  "../lib/python2.7/dist-packages/lcm/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

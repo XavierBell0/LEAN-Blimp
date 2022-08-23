@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/test
+# Install script for directory: /home/pi/LEAN-Blimp/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/boat/build/test/gtest/cmake_install.cmake")
-  include("/home/pi/boat/build/test/types/cmake_install.cmake")
-  include("/home/pi/boat/build/test/c/cmake_install.cmake")
-  include("/home/pi/boat/build/test/cpp/cmake_install.cmake")
-  include("/home/pi/boat/build/test/python/cmake_install.cmake")
-  include("/home/pi/boat/build/test/java/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/gtest/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/types/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/c/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/cpp/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/python/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/java/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/lua/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/go/cmake_install.cmake")
 
 endif()
 

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lcm-java"
+  "lcm.jar"
   "CMakeFiles/lcm-java.dir/java_class_filelist"
   "CMakeFiles/lcm-java.dir/java_compiled_lcm-java"
-  "lcm.jar"
 )
 
 # Per-language clean rules from dependency scanning.

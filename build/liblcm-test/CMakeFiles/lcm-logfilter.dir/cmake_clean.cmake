@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lcm-logfilter.dir/lcm-logfilter.c.o"
-  "lcm-logfilter"
   "lcm-logfilter.pdb"
+  "lcm-logfilter"
 )
 
 # Per-language clean rules from dependency scanning.

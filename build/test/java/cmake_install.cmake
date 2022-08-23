@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/test/java
+# Install script for directory: /home/pi/LEAN-Blimp/test/java
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/boat/build/test/java/hamcrest-core-1.3/cmake_install.cmake")
-  include("/home/pi/boat/build/test/java/junit-4.11/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/java/hamcrest-core-1.3/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/java/junit-4.11/cmake_install.cmake")
 
 endif()
 

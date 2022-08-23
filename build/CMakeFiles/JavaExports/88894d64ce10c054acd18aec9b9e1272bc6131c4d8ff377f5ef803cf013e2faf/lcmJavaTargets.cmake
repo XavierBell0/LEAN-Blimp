@@ -43,7 +43,6 @@ set_target_properties(lcm-java PROPERTIES
   IMPORTED_LOCATION "${_prefix}/share/java/lcm.jar"
   JAR_FILE "${_prefix}/share/java/lcm.jar")
 
-
 unset(_prefix)
 
 cmake_policy(POP)

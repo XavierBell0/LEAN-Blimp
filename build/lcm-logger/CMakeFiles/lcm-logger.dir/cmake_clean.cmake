@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lcm-logger.dir/glib_util.c.o"
   "CMakeFiles/lcm-logger.dir/lcm_logger.c.o"
-  "lcm-logger"
+  "CMakeFiles/lcm-logger.dir/glib_util.c.o"
   "lcm-logger.pdb"
+  "lcm-logger"
 )
 
 # Per-language clean rules from dependency scanning.

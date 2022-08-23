@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/boat/test/c/common.c" "/home/pi/boat/build/test/c/CMakeFiles/test-c-server.dir/common.c.o"
-  "/home/pi/boat/test/c/server.c" "/home/pi/boat/build/test/c/CMakeFiles/test-c-server.dir/server.c.o"
+  "/home/pi/LEAN-Blimp/test/c/common.c" "/home/pi/LEAN-Blimp/build/test/c/CMakeFiles/test-c-server.dir/common.c.o"
+  "/home/pi/LEAN-Blimp/test/c/server.c" "/home/pi/LEAN-Blimp/build/test/c/CMakeFiles/test-c-server.dir/server.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -20,8 +20,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/pi/boat/build/test/types/CMakeFiles/lcm-test-types-c.dir/DependInfo.cmake"
-  "/home/pi/boat/build/lcm/CMakeFiles/lcm.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/test/types/CMakeFiles/lcm-test-types-c.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

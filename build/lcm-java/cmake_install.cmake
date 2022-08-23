@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/lcm-java
+# Install script for directory: /home/pi/LEAN-Blimp/lcm-java
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,26 +38,26 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/boat/build/lcm-java/lcm.jar")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/LEAN-Blimp/build/lcm-java/lcm.jar")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES
-    "/home/pi/boat/build/lcm-java/lcm-logplayer-gui"
-    "/home/pi/boat/build/lcm-java/lcm-spy"
+    "/home/pi/LEAN-Blimp/build/lcm-java/lcm-logplayer-gui"
+    "/home/pi/LEAN-Blimp/build/lcm-java/lcm-spy"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1" TYPE FILE FILES
-    "/home/pi/boat/lcm-java/lcm-logplayer-gui.1"
-    "/home/pi/boat/lcm-java/lcm-spy.1"
+    "/home/pi/LEAN-Blimp/lcm-java/lcm-logplayer-gui.1"
+    "/home/pi/LEAN-Blimp/lcm-java/lcm-spy.1"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/boat/build/lcm-java/jchart2d-code/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm-java/jchart2d-code/cmake_install.cmake")
 
 endif()
 

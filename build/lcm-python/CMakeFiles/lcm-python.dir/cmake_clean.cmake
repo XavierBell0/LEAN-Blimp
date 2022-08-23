@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "../lib/python2.7/dist-packages/lcm/_lcm.pdb"
-  "../lib/python2.7/dist-packages/lcm/_lcm.so"
   "CMakeFiles/lcm-python.dir/module.c.o"
   "CMakeFiles/lcm-python.dir/pyeventlog.c.o"
   "CMakeFiles/lcm-python.dir/pylcm.c.o"
   "CMakeFiles/lcm-python.dir/pylcm_subscription.c.o"
+  "../lib/python2.7/dist-packages/lcm/_lcm.pdb"
+  "../lib/python2.7/dist-packages/lcm/_lcm.so"
 )
 
 # Per-language clean rules from dependency scanning.

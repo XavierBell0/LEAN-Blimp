@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lcm-sink.dir/lcm-sink.c.o"
-  "lcm-sink"
   "lcm-sink.pdb"
+  "lcm-sink"
 )
 
 # Per-language clean rules from dependency scanning.

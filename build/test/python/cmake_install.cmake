@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/test/python
+# Install script for directory: /home/pi/LEAN-Blimp/test/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

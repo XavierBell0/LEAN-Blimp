@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test-cpp-memq_test.dir/common.cpp.o"
   "CMakeFiles/test-cpp-memq_test.dir/memq_test.cpp.o"
-  "test-cpp-memq_test"
+  "CMakeFiles/test-cpp-memq_test.dir/common.cpp.o"
   "test-cpp-memq_test.pdb"
+  "test-cpp-memq_test"
 )
 
 # Per-language clean rules from dependency scanning.

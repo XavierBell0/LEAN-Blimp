@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/boat/lcm/eventlog.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/eventlog.c.o"
-  "/home/pi/boat/lcm/lcm.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcm.c.o"
-  "/home/pi/boat/lcm/lcm_file.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcm_file.c.o"
-  "/home/pi/boat/lcm/lcm_memq.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcm_memq.c.o"
-  "/home/pi/boat/lcm/lcm_mpudpm.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcm_mpudpm.c.o"
-  "/home/pi/boat/lcm/lcm_tcpq.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcm_tcpq.c.o"
-  "/home/pi/boat/lcm/lcm_udpm.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcm_udpm.c.o"
-  "/home/pi/boat/lcm/lcmtypes/channel_port_map_update_t.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcmtypes/channel_port_map_update_t.c.o"
-  "/home/pi/boat/lcm/lcmtypes/channel_to_port_t.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/lcmtypes/channel_to_port_t.c.o"
-  "/home/pi/boat/lcm/ringbuffer.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/ringbuffer.c.o"
-  "/home/pi/boat/lcm/udpm_util.c" "/home/pi/boat/build/lcm/CMakeFiles/lcm-static.dir/udpm_util.c.o"
+  "/home/pi/LEAN-Blimp/lcm/eventlog.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/eventlog.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcm.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcm.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcm_file.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcm_file.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcm_memq.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcm_memq.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcm_mpudpm.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcm_mpudpm.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcm_tcpq.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcm_tcpq.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcm_udpm.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcm_udpm.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcmtypes/channel_port_map_update_t.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcmtypes/channel_port_map_update_t.c.o"
+  "/home/pi/LEAN-Blimp/lcm/lcmtypes/channel_to_port_t.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/lcmtypes/channel_to_port_t.c.o"
+  "/home/pi/LEAN-Blimp/lcm/ringbuffer.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/ringbuffer.c.o"
+  "/home/pi/LEAN-Blimp/lcm/udpm_util.c" "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm-static.dir/udpm_util.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

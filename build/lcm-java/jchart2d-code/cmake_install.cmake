@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/lcm-java/jchart2d-code
+# Install script for directory: /home/pi/LEAN-Blimp/lcm-java/jchart2d-code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,14 +38,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/boat/lcm-java/jchart2d-code/ext/xmlgraphics-commons-1.3.1.jar")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/LEAN-Blimp/lcm-java/jchart2d-code/ext/xmlgraphics-commons-1.3.1.jar")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/boat/lcm-java/jchart2d-code/ext/jide-oss-2.9.7.jar")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/LEAN-Blimp/lcm-java/jchart2d-code/ext/jide-oss-2.9.7.jar")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/boat/build/lcm-java/jchart2d-code/jchart2d-3.2.2.jar")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/java" TYPE FILE FILES "/home/pi/LEAN-Blimp/build/lcm-java/jchart2d-code/jchart2d-3.2.2.jar")
 endif()
 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/boat/test/cpp/client.cpp" "/home/pi/boat/build/test/cpp/CMakeFiles/test-cpp-client.dir/client.cpp.o"
-  "/home/pi/boat/test/cpp/common.cpp" "/home/pi/boat/build/test/cpp/CMakeFiles/test-cpp-client.dir/common.cpp.o"
+  "/home/pi/LEAN-Blimp/test/cpp/client.cpp" "/home/pi/LEAN-Blimp/build/test/cpp/CMakeFiles/test-cpp-client.dir/client.cpp.o"
+  "/home/pi/LEAN-Blimp/test/cpp/common.cpp" "/home/pi/LEAN-Blimp/build/test/cpp/CMakeFiles/test-cpp-client.dir/common.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,9 +26,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/pi/boat/build/lcm/CMakeFiles/lcm.dir/DependInfo.cmake"
-  "/home/pi/boat/build/test/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/pi/boat/build/test/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/test/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/test/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

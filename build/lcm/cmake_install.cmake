@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/lcm
+# Install script for directory: /home/pi/LEAN-Blimp/lcm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/pi/boat/build/lcm/liblcm.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/pi/LEAN-Blimp/build/lcm/liblcm.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lcm" TYPE FILE FILES
-    "/home/pi/boat/lcm/eventlog.h"
-    "/home/pi/boat/lcm/lcm.h"
-    "/home/pi/boat/lcm/lcm_coretypes.h"
-    "/home/pi/boat/lcm/lcm_version.h"
-    "/home/pi/boat/lcm/lcm-cpp.hpp"
-    "/home/pi/boat/lcm/lcm-cpp-impl.hpp"
-    "/home/pi/boat/build/lcm/lcm_export.h"
+    "/home/pi/LEAN-Blimp/lcm/eventlog.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm_coretypes.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm_version.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm-cpp.hpp"
+    "/home/pi/LEAN-Blimp/lcm/lcm-cpp-impl.hpp"
+    "/home/pi/LEAN-Blimp/build/lcm/lcm_export.h"
     )
 endif()
 
@@ -66,8 +66,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/pi/boat/build/lcm/liblcm.so.1.4.0"
-    "/home/pi/boat/build/lcm/liblcm.so.1"
+    "/home/pi/LEAN-Blimp/build/lcm/liblcm.so.1.4.0"
+    "/home/pi/LEAN-Blimp/build/lcm/liblcm.so.1"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblcm.so.1.4.0"
@@ -89,7 +89,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblcm.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/pi/boat/build/lcm/liblcm.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/pi/LEAN-Blimp/build/lcm/liblcm.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblcm.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblcm.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -100,13 +100,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lcm" TYPE FILE FILES
-    "/home/pi/boat/lcm/eventlog.h"
-    "/home/pi/boat/lcm/lcm.h"
-    "/home/pi/boat/lcm/lcm_coretypes.h"
-    "/home/pi/boat/lcm/lcm_version.h"
-    "/home/pi/boat/lcm/lcm-cpp.hpp"
-    "/home/pi/boat/lcm/lcm-cpp-impl.hpp"
-    "/home/pi/boat/build/lcm/lcm_export.h"
+    "/home/pi/LEAN-Blimp/lcm/eventlog.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm_coretypes.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm_version.h"
+    "/home/pi/LEAN-Blimp/lcm/lcm-cpp.hpp"
+    "/home/pi/LEAN-Blimp/lcm/lcm-cpp-impl.hpp"
+    "/home/pi/LEAN-Blimp/build/lcm/lcm_export.h"
     )
 endif()
 

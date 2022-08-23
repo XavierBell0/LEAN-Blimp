@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat
+# Install script for directory: /home/pi/LEAN-Blimp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,14 +38,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES "/home/pi/boat/build/CMakeFiles/JavaExports/88894d64ce10c054acd18aec9b9e1272bc6131c4d8ff377f5ef803cf013e2faf/lcmJavaTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES "/home/pi/LEAN-Blimp/build/CMakeFiles/JavaExports/88894d64ce10c054acd18aec9b9e1272bc6131c4d8ff377f5ef803cf013e2faf/lcmJavaTargets.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake/lcmTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake/lcmTargets.cmake"
-         "/home/pi/boat/build/CMakeFiles/Export/lib/lcm/cmake/lcmTargets.cmake")
+         "/home/pi/LEAN-Blimp/build/CMakeFiles/Export/lib/lcm/cmake/lcmTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake/lcmTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -54,32 +54,33 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES "/home/pi/boat/build/CMakeFiles/Export/lib/lcm/cmake/lcmTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES "/home/pi/LEAN-Blimp/build/CMakeFiles/Export/lib/lcm/cmake/lcmTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES "/home/pi/boat/build/CMakeFiles/Export/lib/lcm/cmake/lcmTargets-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES "/home/pi/LEAN-Blimp/build/CMakeFiles/Export/lib/lcm/cmake/lcmTargets-noconfig.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lcm/cmake" TYPE FILE FILES
-    "/home/pi/boat/build/lcmConfig.cmake"
-    "/home/pi/boat/build/lcmConfigVersion.cmake"
-    "/home/pi/boat/build/lcmUtilities.cmake"
+    "/home/pi/LEAN-Blimp/build/lcmConfig.cmake"
+    "/home/pi/LEAN-Blimp/build/lcmConfigVersion.cmake"
+    "/home/pi/LEAN-Blimp/build/lcmUtilities.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/boat/build/lcm/cmake_install.cmake")
-  include("/home/pi/boat/build/lcmgen/cmake_install.cmake")
-  include("/home/pi/boat/build/lcm-logger/cmake_install.cmake")
-  include("/home/pi/boat/build/liblcm-test/cmake_install.cmake")
-  include("/home/pi/boat/build/docs/cmake_install.cmake")
-  include("/home/pi/boat/build/lcm-java/cmake_install.cmake")
-  include("/home/pi/boat/build/lcm-python/cmake_install.cmake")
-  include("/home/pi/boat/build/test/cmake_install.cmake")
-  include("/home/pi/boat/build/m4macros/cmake_install.cmake")
-  include("/home/pi/boat/build/lcm-pkgconfig/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcmgen/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm-logger/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/liblcm-test/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/docs/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm-java/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm-python/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm-lua/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/test/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/m4macros/cmake_install.cmake")
+  include("/home/pi/LEAN-Blimp/build/lcm-pkgconfig/cmake_install.cmake")
 
 endif()
 
@@ -91,5 +92,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/boat/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/LEAN-Blimp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

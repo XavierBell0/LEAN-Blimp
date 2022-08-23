@@ -6,12 +6,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/lcm-static.dir/lcm_mpudpm.c.o"
   "CMakeFiles/lcm-static.dir/lcm_tcpq.c.o"
   "CMakeFiles/lcm-static.dir/lcm_udpm.c.o"
-  "CMakeFiles/lcm-static.dir/lcmtypes/channel_port_map_update_t.c.o"
-  "CMakeFiles/lcm-static.dir/lcmtypes/channel_to_port_t.c.o"
   "CMakeFiles/lcm-static.dir/ringbuffer.c.o"
   "CMakeFiles/lcm-static.dir/udpm_util.c.o"
-  "liblcm.a"
+  "CMakeFiles/lcm-static.dir/lcmtypes/channel_port_map_update_t.c.o"
+  "CMakeFiles/lcm-static.dir/lcmtypes/channel_to_port_t.c.o"
   "liblcm.pdb"
+  "liblcm.a"
 )
 
 # Per-language clean rules from dependency scanning.

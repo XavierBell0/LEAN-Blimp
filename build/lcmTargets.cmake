@@ -49,7 +49,7 @@ unset(_expectedTargets)
 add_library(lcm-coretypes INTERFACE IMPORTED)
 
 set_target_properties(lcm-coretypes PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/pi/boat"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/pi/LEAN-Blimp"
 )
 
 # Create imported target lcm-static
@@ -57,7 +57,7 @@ add_library(lcm-static STATIC IMPORTED)
 
 set_target_properties(lcm-static PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "LCM_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/pi/boat;/home/pi/boat/build/lcm"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/pi/LEAN-Blimp;/home/pi/LEAN-Blimp/build/lcm"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:GLib2::glib>;\$<LINK_ONLY:-lpthread>"
 )
 
@@ -65,7 +65,7 @@ set_target_properties(lcm-static PROPERTIES
 add_library(lcm SHARED IMPORTED)
 
 set_target_properties(lcm PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/pi/boat;/home/pi/boat/build/lcm"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/pi/LEAN-Blimp;/home/pi/LEAN-Blimp/build/lcm"
 )
 
 # Create imported target lcm-gen
@@ -75,20 +75,20 @@ add_executable(lcm-gen IMPORTED)
 set_property(TARGET lcm-static APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(lcm-static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "C"
-  IMPORTED_LOCATION_NOCONFIG "/home/pi/boat/build/lcm/liblcm.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/pi/LEAN-Blimp/build/lcm/liblcm.a"
   )
 
 # Import target "lcm" for configuration ""
 set_property(TARGET lcm APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(lcm PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/pi/boat/build/lcm/liblcm.so.1.4.0"
+  IMPORTED_LOCATION_NOCONFIG "/home/pi/LEAN-Blimp/build/lcm/liblcm.so.1.4.0"
   IMPORTED_SONAME_NOCONFIG "liblcm.so.1"
   )
 
 # Import target "lcm-gen" for configuration ""
 set_property(TARGET lcm-gen APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(lcm-gen PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/home/pi/boat/build/lcmgen/lcm-gen"
+  IMPORTED_LOCATION_NOCONFIG "/home/pi/LEAN-Blimp/build/lcmgen/lcm-gen"
   )
 
 # This file does not depend on other imported targets which have

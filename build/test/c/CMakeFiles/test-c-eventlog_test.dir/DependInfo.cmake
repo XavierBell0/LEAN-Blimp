@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/boat/test/c/common.c" "/home/pi/boat/build/test/c/CMakeFiles/test-c-eventlog_test.dir/common.c.o"
+  "/home/pi/LEAN-Blimp/test/c/common.c" "/home/pi/LEAN-Blimp/build/test/c/CMakeFiles/test-c-eventlog_test.dir/common.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -24,7 +24,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../test/gtest/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/boat/test/c/eventlog_test.cpp" "/home/pi/boat/build/test/c/CMakeFiles/test-c-eventlog_test.dir/eventlog_test.cpp.o"
+  "/home/pi/LEAN-Blimp/test/c/eventlog_test.cpp" "/home/pi/LEAN-Blimp/build/test/c/CMakeFiles/test-c-eventlog_test.dir/eventlog_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -45,10 +45,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/pi/boat/build/test/types/CMakeFiles/lcm-test-types-c.dir/DependInfo.cmake"
-  "/home/pi/boat/build/lcm/CMakeFiles/lcm.dir/DependInfo.cmake"
-  "/home/pi/boat/build/test/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/pi/boat/build/test/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/test/types/CMakeFiles/lcm-test-types-c.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/lcm/CMakeFiles/lcm.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/test/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/pi/LEAN-Blimp/build/test/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

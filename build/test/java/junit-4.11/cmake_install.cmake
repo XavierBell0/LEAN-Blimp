@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/boat/test/java/junit-4.11
+# Install script for directory: /home/pi/LEAN-Blimp/test/java/junit-4.11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -38,8 +38,7 @@ unset(_expectedTargets)
 # Create imported target lcm-java
 add_library(lcm-java IMPORTED STATIC)
 set_target_properties(lcm-java PROPERTIES
-  IMPORTED_LOCATION "/home/pi/boat/build/lcm-java/lcm.jar"
-  JAR_FILE "/home/pi/boat/build/lcm-java/lcm.jar")
-
+  IMPORTED_LOCATION "/home/pi/LEAN-Blimp/build/lcm-java/lcm.jar"
+  JAR_FILE "/home/pi/LEAN-Blimp/build/lcm-java/lcm.jar")
 
 cmake_policy(POP)
