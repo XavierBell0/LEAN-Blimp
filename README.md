@@ -4,3 +4,4 @@ Low power robotic platforms, constrained by their small form or long endurance, 
 This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing a miniature blimp that will use 1 Watt of computation power to 1 Watt of acutation power.
 
 <h3> Motor Config </h3>
+![servo control](README%20imgs/servo%20control.png)
