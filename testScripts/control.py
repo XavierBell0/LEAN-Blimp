@@ -40,14 +40,7 @@ def my_handler(channel, data):
     print(f'msg.angular_speed = {msg.angular_speed}')
     print(f'msg.vertical_speed = {msg.vertical_speed}')
     throttle = 15 #Duty cycle!!
-    GPIO.output(Motor1Dir, GPIO.LOW)
-    GPIO.output(Motor2Dir, GPIO.LOW)
-    GPIO.output(Motor3Dir, GPIO.LOW)
-    GPIO.output(Motor4Dir, GPIO.LOW)
-    pwm1.ChangeDutyCycle(0)
-    pwm2.ChangeDutyCycle(0)
-    pwm3.ChangeDutyCycle(0)
-    pwm4.ChangeDutyCycle(0)
+
 
     if msg.linear_speed > 0.5:
         GPIO.output(Motor1Dir, GPIO.LOW)
@@ -85,15 +78,15 @@ def my_handler(channel, data):
         pwm3.ChangeDutyCycle(100-throttle)
         pwm4.ChangeDutyCycle(100-throttle)
         print('down')
-    #else:
-        #GPIO.output(Motor1Dir, GPIO.LOW)
-        #GPIO.output(Motor2Dir, GPIO.LOW)
-        #GPIO.output(Motor3Dir, GPIO.LOW)
-        #GPIO.output(Motor4Dir, GPIO.LOW)
-        #pwm1.ChangeDutyCycle(0)
-        #pwm2.ChangeDutyCycle(0)
-        #pwm3.ChangeDutyCycle(0)
-        #pwm4.ChangeDutyCycle(0)
+    else:
+        GPIO.output(Motor1Dir, GPIO.LOW)
+        GPIO.output(Motor2Dir, GPIO.LOW)
+        GPIO.output(Motor3Dir, GPIO.LOW)
+        GPIO.output(Motor4Dir, GPIO.LOW)
+        pwm1.ChangeDutyCycle(0)
+        pwm2.ChangeDutyCycle(0)
+        pwm3.ChangeDutyCycle(0)
+        pwm4.ChangeDutyCycle(0)
 
 lc = lcm.LCM()
 subscription = lc.subscribe("MOTION", my_handler)
