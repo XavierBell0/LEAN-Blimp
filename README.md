@@ -22,15 +22,24 @@ A typical quadcopter has two pairs of motor that rotate in opposite direction. T
   <br>
   (A) Raspberry Pi W Zero;(B) 24 GHz Infineon Radar Position2Go; (C) Sub-micro Servo SG51R; (D) 8520 Coreless Motor; (E) PowerBoost 500 Basic; (F) 550mA 3.8V Li-Po Battery
 </p>
+Alvarez presents a lightwieght blimp design in "Evolved Neuromorpic Altitude Controller for an Autonomous Blimp." This design uses two motors and one servo. The motors are coupled to the servo and rotate together. This allows control by tilting the motors in the desired direction. This suite of thrusters gives control similar to a car.
 
 <p align="center">
 <img src="README%20img/GTMAB%20motor%20config.png" width=500px>
   <br>
   An example blimp gondola from Georgia Tech with various components located
 </p>
+The Georgia Tech GT-MAB is designed for "Monocular Vision-based Human Following on Miniature Robotic Blimp." Their condola has five motors: two vertical, two horizontal, and one sideways. This fifth sideways thruster allows for full three dimensional control.
 
 <p align="center">
 <img src="README%20img/3%20motor.png" width=500px>
   <br>
   Frame of 3 motor blimp config
 </p>
+Three motor configurations are somewhat common too, especially in the creation of online hobby projects. These designs use two vertical thrusters and one horizontal or vice versa. While giving the same theoretical control as the two DC motors and one servo setup, the imbalance in angular momentum created by spinning up or down the unpaired thruster will create a torque.
+
+<h3> Balloon Config </h3>
+
+<h3> Thrust Testing </h3>
+
+
