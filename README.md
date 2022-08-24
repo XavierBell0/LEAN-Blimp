@@ -5,9 +5,22 @@ Low power robotic platforms, constrained by their small form or long endurance, 
 This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of acutation power.
 
 ### Table of Contents  
+**[Specs](#specs)**<br>
 **[Motor Config](#motor-config)**<br>
 **[Balloon Choice](#balloon-choice)**<br>                                                 
 **[Thrust Testing](#thrust-testing)**<br>
+
+### Specs
+- 7x20mm motors (4)
+- 75mm Gemfan HBN props (4)
+- L9110s Motor Controller (2)
+- INA219 Power Sensor (2)
+- MPU6050 IMU (1)
+- Raspberry Pi Zero 1.1 W (1)
+- 340mAh LiPo battery (2)
+
+Total weight = 79.5g
+Balloon max lift = 84.2g
                                                              
 ### Motor Config
 There are many existing motor configurations for blimp-like UAVs in academia and online. These designs were referenced in the creation of BEAN.
@@ -72,5 +85,6 @@ Finding lift data for balloons is difficult, so we bought standard size party ba
 The balloon we chose was the largest one commercially available that has a lift capacity (when filled with >99% helium) of 84.2g. To spend as little power on keeping the blimp airborne as possible, we want our gondola weight to be close to this value. An overall negative buoyancy is desired in case of power failure, otherwise BEAN would just float away.
 
 ## Thrust Testing
+![alt-text-1](image1.png "title-1") ![alt-text-2](image2.png "title-2)
 
-
+Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing.
