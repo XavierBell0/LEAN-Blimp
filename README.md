@@ -6,8 +6,8 @@ This repository contains all files necessary to create one of these low power ro
 
 ### Table of Contents  
 **[Motor Config](#motor-config)**<br>
-**[Thrust Testing](#thrust-testing)**<br>
 **[Balloon Choice](#balloon-choice)**<br>                                                 
+**[Thrust Testing](#thrust-testing)**<br>
                                                              
 ### Motor Config
 There are many existing motor configurations for blimp-like UAVs in academia and online. These designs were referenced in the creation of BEAN.
