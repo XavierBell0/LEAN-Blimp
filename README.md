@@ -88,7 +88,7 @@ The balloon we chose was the largest one commercially available that has a lift 
 <p align="center">
   <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/testStand.png" alt="Test Stand" height="300" />
   <br>
-  Left: Propellers 4-30mm BN, 40mm BN, 55mm P, 55mm BN, 65mm BN, 65 HBN OR, 65 HBN Blue, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
+  Left: Propellers 4-30mm BN, 40mm BN, 55mm BN, 55mm P, 65 HBN OR, 65 HBN Blue, 65mm BN, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
   Right: Thrust test Stand
 </p>
   
