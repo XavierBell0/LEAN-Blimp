@@ -7,7 +7,7 @@ This repository contains all files necessary to create one of these low power ro
 ### Table of Contents  
 **[Specs](#specs)**<br>
 **[Motor Config](#motor-config)**<br>
-**[Balloon Choice](#balloon-choice)**<br>                                                 
+**[Balloon Choice](#balloon-choice)**<br>
 **[Thrust Testing](#thrust-testing)**<br>
 
 ### Specs
@@ -35,7 +35,7 @@ A typical quadcopter has two pairs of motor that rotate in opposite direction wi
 <br>
 <br>
 
-<p align="center">
+<p align="center" font-size: 10px>
 <img src="README%20img/servo%20control.png" width=600px>
   <br>
    Blimp with (C) Sub-micro Servo SG51R; (D) 8520 Coreless Motor;
@@ -85,6 +85,17 @@ Finding lift data for balloons is difficult, so we bought standard size party ba
 The balloon we chose was the largest one commercially available that has a lift capacity (when filled with >99% helium) of 84.2g. To spend as little power on keeping the blimp airborne as possible, we want our gondola weight to be close to this value. An overall negative buoyancy is desired in case of power failure, otherwise BEAN would just float away.
 
 ## Thrust Testing
-![alt-text-1](image1.png "title-1") ![alt-text-2](image2.png "title-2)
-
+<p align="center">
+  <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/testStand.png" alt="Test Stand" height="300" />
+  <br>
+  Right: Propellers 4-30mm BN, 40mm BN, 55mm P, 55mm BN, 65mm BN, 65 HBN OR, 65 HBN Blue, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
+  Left: Thrust test Stand
+</p>
+  
 Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing.
+
+<p align="center">
+  <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PowerVThrust.png" alt="Power V Thrust" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/CurrentVEff.png" alt="Current V Efficiency" height="300" />
+  <br>
+  Full data can be found <a href="https://docs.google.com/spreadsheets/d/1OiYe1rvC_GbhTWiBtDa-APiMod3p-sEL3HPwGkVhBRM/edit#gid=1969339479">here</a>
+</p>
