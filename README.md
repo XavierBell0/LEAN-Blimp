@@ -2,7 +2,7 @@
 ## Blimp w/ Efficient Autonomous Navigation
 Low power robotic platforms, constrained by their small form or long endurance, allow for more capable systems. Small form factors have limited power sources and therefore can only operate for short periods of time. These small robots can be used for warehouse surveillance, medicine delivery, and more. Long duration missions are more efficient if they consume less power and can function longer. These platforms are viable in space and for experimental climate/oceanographic monitoring. Decreasing power consumed by these systems increases mission lifetime. In these small and long duration regimes, the power required for computation and navigation is no longer negligible. 
 
-This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of acutation power.
+This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of actuation power.
 
 ### Table of Contents  
 **[Specs](#specs)**<br>
@@ -88,8 +88,8 @@ The balloon we chose was the largest one commercially available that has a lift 
 <p align="center">
   <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/testStand.png" alt="Test Stand" height="300" />
   <br>
-  Right: Propellers 4-30mm BN, 40mm BN, 55mm P, 55mm BN, 65mm BN, 65 HBN OR, 65 HBN Blue, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
-  Left: Thrust test Stand
+  Left: Propellers 4-30mm BN, 40mm BN, 55mm P, 55mm BN, 65mm BN, 65 HBN OR, 65 HBN Blue, 75mm HBN, 4in HBN, 5.3in Syma stock <br>
+  Right: Thrust test Stand
 </p>
   
 Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing.
