@@ -24,12 +24,18 @@ A typical quadcopter has two pairs of motor that rotate in opposite direction. T
 </p>
 Alvarez presents a lightwieght blimp design in "Evolved Neuromorpic Altitude Controller for an Autonomous Blimp." This design uses two motors and one servo. The motors are coupled to the servo and rotate together. This allows control by tilting the motors in the desired direction. This suite of thrusters gives control similar to a car.
 
+<br>
+<br>
+
 <p align="center">
 <img src="README%20img/GTMAB%20motor%20config.png" width=500px>
   <br>
   An example blimp gondola from Georgia Tech with various components located
 </p>
 The Georgia Tech GT-MAB is designed for "Monocular Vision-based Human Following on Miniature Robotic Blimp." Their condola has five motors: two vertical, two horizontal, and one sideways. This fifth sideways thruster allows for full three dimensional control.
+
+<br>
+<br>
 
 <p align="center">
 <img src="README%20img/3%20motor.png" width=500px>
@@ -38,6 +44,14 @@ The Georgia Tech GT-MAB is designed for "Monocular Vision-based Human Following 
 </p>
 Three motor configurations are somewhat common too, especially in the creation of online hobby projects. These designs use two vertical thrusters and one horizontal or vice versa. While giving the same theoretical control as the two DC motors and one servo setup, the imbalance in angular momentum created by spinning up or down the unpaired thruster will create a torque.
 
+<br>
+<br>
+
+<p align="center">
+<img src="README%20img/BEANcad.png" width=500px>
+  <br>
+  Frame of 3 motor blimp config
+</p>
 <h3> Balloon Config </h3>
 
 <h3> Thrust Testing </h3>
