@@ -63,7 +63,13 @@ BEAN has four thrusters, two horizontal and two vertical. This gives control sim
 <br>
 
 ## Balloon Choice
-The main problem with finding a balloon was lack of customizability. 
+The main problem with finding a balloon was lack of customizability. Rather than designing the gondola and picking a balloon to fit it, the balloon dictated what  could put on the gondola.
+
+Making a custom envelope would not have been trivial. The material required is hard to purchase online in reasonable quantities and a proper heat seal is vital to operation. Custom making our balloon would also negativily affect repeatibility in future designs.
+
+Finding lift data for balloons is difficult, so we bought standard size party balloon to calibrate testing. The balloon was weighed (no helium), and buoyancy tested. Then the estimated gondola weight as desired lift, found the required diameter for a similarly shaped balloon. The estimated drag on this ideal balloon was calculated to assist in motor selection.
+
+The balloon we chose was the largest one commercially available that has a lift capacity (when filled with >99% helium) of 84.2g. To spend as little power on keeping the blimp airborne as possible, we want our gondola weight to be close to this value. An overall negative buoyancy is desired in case of power failure, otherwise BEAN would just float away.
 
 ## Thrust Testing
 
