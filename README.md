@@ -2,7 +2,7 @@
 ## Blimp w/ Efficient Autonomous Navigation
 Low power robotic platforms, constrained by their small form or long endurance, allow for more capable systems. Small form factors have limited power sources and therefore can only operate for short periods of time. These small robots can be used for warehouse surveillance, medicine delivery, and more. Long duration missions are more efficient if they consume less power and can function longer. These platforms are viable in space and for experimental climate/oceanographic monitoring. Decreasing power consumed by these systems increases mission lifetime. In these small and long duration regimes, the power required for computation and navigation is no longer negligible. 
 
-This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of actuation power.
+This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of actuation power at 1m/s.
 
 #### Table of Contents  
 **[Specs](#specs)**<br>
@@ -20,7 +20,7 @@ This repository contains all files necessary to create one of these low power ro
 - Raspberry Pi Zero 1.1 W (1)
 - 340mAh LiPo battery (2)
 
-Total weight = 79.5g
+Total weight = 79.5g <br>
 Balloon max lift = 84.2g
                                                              
 ### Motor Config
@@ -100,7 +100,7 @@ Thrust testing was performed to determine the most efficient propeller and motor
   <br>
   Full data can be found <a href="https://docs.google.com/spreadsheets/d/1OiYe1rvC_GbhTWiBtDa-APiMod3p-sEL3HPwGkVhBRM/edit#gid=1969339479">here</a>
 </p>
-Using the findings from these tests, we selected a 7x20mm motors with 75mm propellers. The larger propellers, while more efficient, require placement further from the center of the gondola. In the event of a crash, the arms could flex and propellers could cut the balloon or damage a surrounding obstacle. By keeping the propellers close, we maintain a key characteristic of soft robots: safe human interaction. The balloon will bump into an obstacle before the propellers do.
+BEAN uses 7x20mm motors with 75mm propellers. From the above graphs, one can see that the 75mm propellers are not the most efficient. However, larger propellers require placement further from the center of the gondola. In the event of a crash, the arms could flex and propellers could cut the balloon or damage a surrounding obstacle. By keeping the propellers close, we maintain a key characteristic of soft robots: safe human interaction. The balloon will bump into an obstacle before the propellers do.
 
 While gear driven propellers would increase efficiency, the added weight of gearboxes exceeded our payload limit. Gear driven motors will be vital in future iterations. 
 
