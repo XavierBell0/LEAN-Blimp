@@ -4,11 +4,12 @@ Low power robotic platforms, constrained by their small form or long endurance, 
 
 This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of actuation power.
 
-### Table of Contents  
+#### Table of Contents  
 **[Specs](#specs)**<br>
 **[Motor Config](#motor-config)**<br>
 **[Balloon Choice](#balloon-choice)**<br>
 **[Thrust Testing](#thrust-testing)**<br>
+**[Electronics](#electronics)**<br>
 
 ### Specs
 - 7x20mm motors (4)
@@ -75,7 +76,7 @@ BEAN has four thrusters, two horizontal and two vertical. This gives control sim
 <br>
 <br>
 
-## Balloon Choice
+### Balloon Choice
 The main problem with finding a balloon was lack of customizability. Rather than designing the gondola and picking a balloon to fit it, the balloon dictated what  could put on the gondola.
 
 Making a custom envelope would not have been trivial. The material required is hard to purchase online in reasonable quantities and a proper heat seal is vital to operation. Custom making our balloon would also negativily affect repeatibility in future designs.
@@ -84,7 +85,7 @@ Finding lift data for balloons is difficult, so we bought standard size party ba
 
 The balloon we chose was the largest one commercially available that has a lift capacity (when filled with >99% helium) of 84.2g. To spend as little power on keeping the blimp airborne as possible, we want our gondola weight to be close to this value. An overall negative buoyancy is desired in case of power failure, otherwise BEAN would just float away.
 
-## Thrust Testing
+### Thrust Testing
 <p align="center">
   <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PropSelection.png" alt="Prop Selection" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/testStand.png" alt="Test Stand" height="300" />
   <br>
@@ -92,10 +93,22 @@ The balloon we chose was the largest one commercially available that has a lift 
   Right: Thrust test Stand
 </p>
   
-Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing.
+Thrust testing was performed to determine the most efficient propeller and motor combo. The test stand is shown above. The motor is upside down to keep air from blowing on the scale and disrupting the reading. Also shown is a reasonable selection of propellers of different shapes and sizes that were used in testing. Dashed lines are testing the same prop on different motors of the same size.
 
 <p align="center">
   <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/PowerVThrust.png" alt="Power V Thrust" height="300"/> <img src="https://github.com/XavierBell0/LEAN-Blimp/blob/main/README%20img/CurrentVEff.png" alt="Current V Efficiency" height="300" />
   <br>
   Full data can be found <a href="https://docs.google.com/spreadsheets/d/1OiYe1rvC_GbhTWiBtDa-APiMod3p-sEL3HPwGkVhBRM/edit#gid=1969339479">here</a>
+</p>
+Using the findings from these tests, we selected a 7x20mm motors with 75mm propellers. The larger propellers, while more efficient, require placement further from the center of the gondola. In the event of a crash, the arms could flex and propellers could cut the balloon or damage a surrounding obstacle. By keeping the propellers close, we maintain a key characteristic of soft robots: safe human interaction. The balloon will bump into an obstacle before the propellers do.
+
+While gear driven propellers would increase efficiency, the added weight of gearboxes exceeded our payload limit. Gear driven motors will be vital in future iterations. 
+
+### Electronics
+The computer in use is the Raspberry Pi Zero W 1.1. This is connected to an IMU, power sensor, and 340mAh 1S LiPo. A 5V boost converter steps up the 3.7V input from the battery to power the Pi. Another battery powers the L9110s motor controllers and 7x20mm motors. A second power sensor monitors the rate of power consumption. The Pi-side and motor-side circuits are connected through GPIO pins from the controllers to the Pi, I2C from power sensors, and a shared ground. The full schematic can be seen below.
+
+<p align="center">
+<img src="README%20img/BEANSchematic.png" width=500px>
+  <br>
+  BEAN electrical schematic
 </p>
