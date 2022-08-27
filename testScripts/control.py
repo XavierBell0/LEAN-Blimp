@@ -36,9 +36,9 @@ pwm4.start(0)
 
 def my_handler(channel, data):
     msg = motion_data.decode(data)
-    print(f'msg.linear_speed = {msg.linear_speed}')
-    print(f'msg.angular_speed = {msg.angular_speed}')
-    print(f'msg.vertical_speed = {msg.vertical_speed}')
+    #print(f'msg.linear_speed = {msg.linear_speed}')
+    #print(f'msg.angular_speed = {msg.angular_speed}')
+    #print(f'msg.vertical_speed = {msg.vertical_speed}')
     throttle = 15 #Duty cycle!!
     if msg.linear_speed != 0 or msg.angular_speed != 0 or msg.vertical_speed != 0:
         if msg.linear_speed > 0.5:
