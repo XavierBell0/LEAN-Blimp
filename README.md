@@ -105,7 +105,7 @@ After all this, the new graphs look much nicer.
 ## Data collect
 Data collection is performed by recieving sensor data through I2C, creating an SQL database to store new data, and then graphing. All of this is done on the Raspberry Pi Zero W itself. The graphs can then be transfered to another computer through scp or by uploading to a git repo. We plan to include live graphing in a GUI in the future. 
 
-###Teleop Flights
+### Teleop Flights
 To simply fly the blimp, run the following commands in the BEAN directory. The controls are below
 - "w": forward
 - "s": back
@@ -124,7 +124,7 @@ fg %2
 End with ^C. Make sure to interupt both scripts. You can run "jobs" to see if any remain.
 Take to the skies! But don't go outside so more like "Take to the Ceilings!"
 
-###Power sensing & Teleop
+### Power sensing & Teleop
 Run the following commands in the BEAN directory to fly with power sensing.
 ```
 sudo python3 control.py & sudo python3 input.py & sudo python3 power_sensing.py & sudo python3 power_collect.py &
@@ -141,4 +141,4 @@ scp -r pi@[PI_IP_ADDRESS]:/home/pi/LEAN-Blimp/testScripts/graphs [desired direct
 The -r tag exports the entire graphs folder recursively. 
 
 ## Experimentation
-The first few flights of BEAN showed problems with 
+The initial flights of BEAN showed a loss of control after reaching a certain speed. There was no method of
