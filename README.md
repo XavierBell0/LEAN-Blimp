@@ -113,7 +113,7 @@ To simply fly the blimp, run the following commands in the BEAN directory. The c
 - "d": right
 - "-": down
 - "=": up
-Any other: stop all motors.
+- Any other: stop all motors.
 ```
 sudo python3 control.py & sudo python3 input.py &
 ```
