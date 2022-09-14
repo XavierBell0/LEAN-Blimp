@@ -3,7 +3,7 @@
 
 See hardware and design considerations at <a href="https://github.com/XavierBell0/BEAN-Docs">BEAN-Docs</a>
 
-Low power robotic platforms, constrained by their small form or long endurance, allow for more capable systems. Small form factors have limited power sources and therefore can only operate for short periods of time. These small robots can be used for warehouse surveillance, medicine delivery, and more. Long duration missions are more efficient if they consume less power and can function longer. These platforms are viable in space and for experimental climate/oceanographic monitoring. Decreasing power consumed by these systems increases mission lifetime. In these small and long duration regimes, the power required for computation and navigation is no longer negligible. 
+Small form and long endurance missions require low power robotic systems. Small form factors have limited power sources and therefore can only operate for short periods of time. Long duration missions are more efficient if they consume less power and can function longer. These functions are especially useful for space platforms, monitoring systems, and medicine delivery. Decreasing power consumption increases mission duration. In these small and long duration regimes, the power required for computation and navigation is no longer negligible. 
 
 This repository contains all files necessary to create one of these low power robotic platforms. As part of the MIT LEAN lab, we are pursuing BEAN, a miniature blimp that will use 1 Watt of computation power to 1 Watt of actuation power at 1m/s.
 
@@ -141,4 +141,4 @@ scp -r pi@[PI_IP_ADDRESS]:/home/pi/LEAN-Blimp/testScripts/graphs [desired direct
 The -r tag exports the entire graphs folder recursively. 
 
 ## Experimentation
-The initial flights of BEAN showed a loss of control after reaching a certain speed. There was no method of
+The initial flights of BEAN showed a loss of control after reaching a certain speed. The blimp veered sharply left or right before reaching top speed. It was unstable. The primitive controls described above had no throttle control for each channel which made adjusting very diffucult. The airframe also doesn't react quickly so recognizing there is often not enough time after recognizing drift to correct. If a correction is made, then it is very often an overcorrection and the blimp sprials out in the opposite direction. This can hopefully be fixed with a PID controller in short term and state space control in the future. The propellers also seem to perform noticably less efficient than on the test stand. Currently BEAN consumes about 3W for 1m/s of velocity.
