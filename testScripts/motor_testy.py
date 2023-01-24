@@ -4,14 +4,14 @@ from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 
-Motor1PWM = 12
-Motor1Dir = 5
-Motor2PWM = 6
-Motor2Dir = 21
+Motor1PWM = 25
+Motor1Dir = 8
+Motor2PWM = 9
+Motor2Dir = 11
 Motor3PWM = 23
 Motor3Dir = 24
-Motor4PWM = 22
-Motor4Dir = 27
+Motor4PWM = 27
+Motor4Dir = 22
 
 duty = 8
 
