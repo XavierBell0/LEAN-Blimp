@@ -37,21 +37,23 @@ pwm2.start(0)
 pwm3.start(0)
 pwm4.start(0)
 
+sleep(3)
+
 print("Turning motor 1 on")
 pwm1.ChangeDutyCycle(duty)
-sleep(3)
+sleep(5)
 
 print("Turning motor 2 on")
 pwm2.ChangeDutyCycle(duty)
-sleep(3)
+sleep(5)
 
 print("Turning motor 3 on")
 pwm3.ChangeDutyCycle(duty)
-sleep(3)
+sleep(5)
 
 print("Turning motor 4 on")
 pwm4.ChangeDutyCycle(20)
-sleep(3)
+sleep(5)
 
 pwm1.ChangeDutyCycle(0)
 pwm2.ChangeDutyCycle(0)
