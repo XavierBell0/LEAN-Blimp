@@ -51,6 +51,7 @@ sleep(3)
 
 print("Turning motor 4 on")
 pwm4.ChangeDutyCycle(20)
+sleep(3)
 
 pwm1.ChangeDutyCycle(0)
 pwm2.ChangeDutyCycle(0)
